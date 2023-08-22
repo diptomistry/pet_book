@@ -1,18 +1,21 @@
+
+
+
 import 'package:flutter/material.dart';
-//import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/scheduler.dart';
-//import 'package:petbook/profile/UserProfilePage.dart';
-//import 'package:petbook/profile/profile.dart';
+import 'package:pet_book/profile/UserProfilePage.dart';
+import 'package:pet_book/profile/profile.dart';
 import 'auth/homepage.dart';
-//import 'auth/login.dart';
-//import 'auth/forgetPass.dart';
-//import 'auth/createAccount.dart';
+import 'auth/login.dart';
+import 'auth/forgetPass.dart';
+import 'auth/createAccount.dart';
 
 Color CustomColor1 = Color(0xFF00a19d);
 Color CustomColor2 = Color(0xFF8aabca);
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
- // await Firebase.initializeApp();
+  //await Firebase.initializeApp();
   runApp(PetbookApp());
 }
 
@@ -79,10 +82,10 @@ class _PetbookAppState extends State<PetbookApp> {
       home: HomePage(setThemeMode: _setThemeMode),// Pass _themeMode to MyLogin
       routes: {
         'homepage': (context) => HomePage(setThemeMode: _setThemeMode),
-        //'login': (context) => MyLogin(themeMode: _themeMode), // Pass _themeMode to MyLogin
-        //'forgetpass': (context) => ResetPassword(themeMode: _themeMode),
-        //'register':(context)=>createAcc(),
-        //'profile':(context)=>UserProfilePage(),
+        'login': (context) => MyLogin(themeMode: _themeMode), // Pass _themeMode to MyLogin
+        'forgetpass': (context) => ResetPassword(themeMode: _themeMode),
+        'register':(context)=>createAcc(),
+        'profile':(context)=>UserProfilePage(),
       },
       builder: (context, child) {
         return GestureDetector(
@@ -98,3 +101,8 @@ class _PetbookAppState extends State<PetbookApp> {
     );
   }
 }
+
+
+
+
+
